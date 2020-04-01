@@ -1,0 +1,18 @@
+import java.util.*;
+public class Slovar{
+    public static void main (String[] args){
+        HashMap<String, Integer> slovarr=new HashMap<>();
+        slovarr.put("a",0);
+        slovarr.put("b",0);
+        slovarr.put("b",slovarr.get("b")+1);
+        int[] q={2,4,5};
+        for(int x:q){
+            if (x%2==1){
+                slovarr.put("b",slovarr.get("b")+1);
+            }else{
+                slovarr.put("a",slovarr.get("a")+1);
+            }
+        }
+        System.out.println(slovarr.entrySet());
+    }
+}
