@@ -1,0 +1,32 @@
+import java.util.*;
+public class Stackll{
+    public static void Stack1 (){
+        Stack<Integer> chlen=new Stack<>();
+        int[] s={1,2,4,8,16,32};
+        for (int i=0;i<6;i++){
+            chlen.push(s[i]);
+        }
+        while(!chlen.isEmpty()){
+            System.out.println(chlen.pop());
+        }
+    }
+     public static void HashMap1 (){
+        HashMap<String, Integer> slovarr=new HashMap<>();
+        slovarr.put("a",0);
+        slovarr.put("b",0);
+        slovarr.put("b",slovarr.get("b")+1);
+        int[] q={2,4,5};
+        for(int x:q){
+            if (x%2==1){
+                slovarr.put("b",slovarr.get("b")+1);
+            }else{
+                slovarr.put("a",slovarr.get("a")+1);
+            }
+        }
+        System.out.println(slovarr.entrySet());
+    }
+    public static void main(String []args){
+        HashMap1();
+        Stack1();
+    }
+}
